@@ -43,11 +43,11 @@ body {
   border-right: 0;
   text-align: left;
   margin-left: 0;
-  width: 50vw;
+  width: min(720px, 80vw);
 }
 
 .subcontent {
-  width: 50vw;
+  width: min(720px, 80vw);
   padding-left: 1ch;
 }
 
