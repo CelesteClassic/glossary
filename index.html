@@ -21,6 +21,7 @@
       <a href="#spikejump">spike jump</a><br>
       <a href="#emptydash">empty dash</a><br>
       <a href="#softdash">soft dash</a><br>
+      <a href="#boost">boost</a><br>
       <a href="#cloudboost">cloud boost</a><br>
       <a href="#cornerjump">corner jump</a><br>
       <a href="#gemskip">gemskip</a><br>
@@ -35,7 +36,7 @@
         1) spikes don't kill you if you're moving in the direction they face, and gravity isn't applied when you're directly above the ground.
         <br>
         <br>
-        if you <b>land on the ground with a small upwards velocity</b>, below 0.5 px/frame, you can <b>clip up-facing spikes</b> until the game finally lifts you off of the ground.
+        if you <b>land on the ground with any upwards velocity</b>, you can <b>clip through up-facing spikes</b> until the game eventually lifts you off of the ground.
         <br>
         <br>
         <img src="img/spikeclip1.gif" width="96" height="96">
@@ -72,6 +73,14 @@
         if you are next to the room's boundary and <b>moving toward the boundary</b> such that you would have exceeded the room's boundary on the next frame, <b>dashing away from the boundary during this frame</b> will slow the startup of the dash's horizontal speed.
         <br><br>
         <img src="img/softdash.gif" width="240" height="120">
+      </div>
+      <br>
+
+      <div id="boost">boost</div><hr>
+      <div class="subcontent">
+        boosts typically refer to the <b>additional height gained</b> from restoring both your dash and <a href="graceframes">grace frames</a> whilst maintaining an <b>upward velocity</b>, and performing a grounded jump while being a few pixels above ground.
+        <br><br>
+        <img src="img/boost.gif" width="96" height="96">
       </div>
       <br>
 
