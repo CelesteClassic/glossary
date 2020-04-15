@@ -24,6 +24,7 @@
       <a href="#boost">boost</a><br>
       <a href="#cloudboost">cloud boost</a><br>
       <a href="#cornerjump">corner jump</a><br>
+      <a href="#landingclip">landing clip</a><br>
       <a href="#gemskip">gemskip</a><br>
       <a href="#graceframes">grace frames</a><br>
       <a href="#parity">parity</a><br>
@@ -101,6 +102,16 @@
         2) because spikes don't kill you if you're moving in the direction they face, if you <b>steer in the direction a spike's facing</b> at the right moment, you can get close enough to safely walljump off of a solid block's corner.
         <br><br>
         <img src="img/cornerjump2.gif" width="96" height="96">
+      </div>
+      <br>
+
+      <div id="landingclip">landing clip</div><hr>
+      <div class="subcontent">
+        upon colliding with a solid block, the player's velocity and subpixels in the collision direction <b>will be set to 0</b>. if you fall such that there's a frame of you <b>directly above the ground without colliding with it</b>, you can maintain your velocity and subpixels by leaving the ground on the next frame.
+        <br><br>
+        <img src="img/landingclip.gif" width="192" height="96">
+        <br><br>
+        landing clips are convenient for subpixel setups, and restoring dashes without coming to a full vertical stop.
       </div>
       <br>
 
