@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Celeste Classic Glossary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="bootup">
+      <img src="p8logo.png"> <img src="maddy.png" style="height:1.6em"><br><br>
+      pico-8 0.1.12d<br>
+      (c) 2014-20 lexaloffle games llp<br>
+      <br>
+    </div>
+    <div class="content">
+      > celeste classic glossary<br>
+      <br>
+
+      contents<hr>
+      <a href="#spikeclip">spike clip</a><br>
+      <a href="#spikejump">spike jump</a><br>
+      <a href="#emptydash">empty dash</a><br>
+      <a href="#softdash">soft dash</a><br>
+      <a href="#cloudboost">cloud boost</a><br>
+      <a href="#cornerjump">corner jump</a><br>
+      <a href="#gemskip">gemskip</a><br>
+      <a href="#graceframes">grace frames</a><br>
+      <a href="#parity">parity</a><br>
+      <br>
+
+      <div id="spikeclip">spike clip</div><hr>
+      <div class="subcontent">
+        there are two ways in which spikes can be clipped:<br>
+        <br>
+        1) spikes don't kill you if you're moving in the direction they face, and gravity isn't applied when you're directly above the ground.
+        <br>
+        <br>
+        if you <b>land on the ground with a small upwards velocity</b>, below 0.5 px/frame, you can <b>clip up-facing spikes</b> until the game finally lifts you off of the ground.
+        <br>
+        <br>
+        <img src="img/spikeclip1.gif" width="96" height="96">
+        <br>
+        <br>
+        2) in the early frames of a dash, a spike's hitbox can be smaller than the distance you travel in 1 frame. if a spike <b>doesn't have a solid block behind it</b>, e.g., the ceiling in 2500m, you can completely dash over it.
+        <br>
+        <br>
+        <img src="img/spikeclip2.gif" width="96" height="96">
+      </div>
+      <br>
+
+      <div id="spikejump">spike jump</div><hr>
+      <div class="subcontent">
+        if your <b>x-coordinate has odd parity</b> (see <a href="#parity">parity</a>), you can get close enough to <b>left-facing spikes</b> to safely walljump off of solid blocks behind them.
+        <br>
+        <br>
+        <img src="img/spikejump.gif" width="96" height="96">
+      </div>
+      <br>
+
+      <div id="emptydash">empty dash</div><hr>
+      <div class="subcontent">
+        if you dash <b>without providing directional input</b>, you will perform a <b>shorter forward dash</b> than if you were holding forward. in most cases, this can be used to change the player's <a href="#parity">parity</a>.
+        <br><br>
+        <img src="img/emptydash.gif" width="144" height="96">
+        <br><br>
+        <b>note:</b> empty dashes are <b>not possible</b> in the new release's port of celeste classic. a full-length forward dash will be performed instead.
+      </div>
+      <br>
+
+      <div id="softdash">soft dash</div><hr>
+      <div class="subcontent">
+        if you are next to the room's boundary and <b>moving toward the boundary</b> such that you would have exceeded the room's boundary on the next frame, <b>dashing away from the boundary during this frame</b> will slow the startup of the dash's horizontal speed.
+        <br><br>
+        <img src="img/softdash.gif" width="240" height="120">
+      </div>
+      <br>
+
+      <div id="cloudboost">cloud boost</div><hr>
+      <div class="subcontent">
+        if you pass through a cloud such that there's a <b>frame of you directly above the cloud</b>, both your dash and <a href="#graceframes">grace frames</a> get restored whilst maintaining your velocity.
+        <br><br>
+        <img src="img/cloudboost.gif" width="96" height="96">
+      </div>
+      <br>
+
+      <div id="cornerjump">corner jump</div><hr>
+      <div class="subcontent">
+        corner jumps refer to one of two walljump setups:
+        <br><br>
+        1) with a well-positioned walljump or diagonal dash, you can get around a solid block's corner with <b>enough height to walljump</b> off of that block.
+        <br><br>
+        <img src="img/cornerjump1.gif" width="96" height="96">
+        <br><br>
+        2) because spikes don't kill you if you're moving in the direction they face, if you <b>steer in the direction a spike's facing</b> at the right moment, you can get close enough to safely walljump off of a solid block's corner.
+        <br><br>
+        <img src="img/cornerjump2.gif" width="96" height="96">
+      </div>
+      <br>
+
+      <div id="gemskip">gemskip</div><hr>
+      <div class="subcontent">
+        gemskip refers to <b>exiting 2200m without collecting the dash power-up</b>. there are two ways of accomplishing this:
+        <br><br>
+        1) by <b>dashing on the same frame that you trigger the chest opening sequence</b>, the dash gets performed after the sequence is over, and both your dash and <a href="#graceframes">grace frames</a> get restored. you can exit by jumping within the grace period, and dashing upward when high enough.
+        <br><br>
+        <img src="img/gemskip1.gif" width="120" height="120">
+        <br><br>
+        2) by walljumping in the ditch next to the chest with a <b>y-coordinate between 93.35 and 93.40</b>, you can clip the ground to restore your <a href="#graceframes">grace frames</a> whilst maintaining your velocity. you can exit by jumping at the walljump's peak, and dashing upward when high enough (<b>chestskip</b>).
+        <br><br>
+        <img src="img/gemskip2.gif" width="120" height="120">
+      </div>
+      <br>
+
+      <div id="graceframes">grace frames</div><hr>
+      <div class="subcontent">
+        when leaving the ground by any means other than a jump, e.g., running off a ledge or dashing off, the game gives you a <b>6 frame grace period</b> to input a jump as if you were still on the ground.
+        <br><br>
+        <img src="img/graceframes.gif" width="360" height="120">
+      </div>
+      <br>
+
+      <div id="parity">parity</div><hr>
+      <div class="subcontent">
+        parity refers to a state of being <b>even or odd</b>, and whether your position has even or odd-numbered coordinates determines whether certain options, like <a href="#spikejump">spike jumps</a>, are possible. below is an overview on <b>controlling your x-coordinate's parity</b>:
+        <br><br>
+        you <b>spawn with an even x-coordinate</b>, and regular horizontal movement like walking and drifting mid-air <b>can't change your x-coordinate's parity</b>.
+        <br><br>
+        horizontally aligning yourself with the room's boundary or a solid block <b>will make your x-coordinate odd</b>.
+        <br><br>
+        <img src="img/parity.gif" width="148" height="74">
+        <br><br>
+        depending on subpixels, <a href="#emptydash">empty dashes</a> <b>usually switch your x-coordinate's parity</b>, and regular forward dashes <b>usually preserve its parity</b>.
+        <br><br>
+        depending on subpixels, notably as a result of time spent wall sliding, time spent mid-air, and time spent moving into the room's boundary, walljumps and diagonal dashes <b>may or may not switch your x-coordinate's parity</b>.
+      </div>
+      <br>
+
+    </div>
+  </body>
+</html>
